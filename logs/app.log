@@ -1,0 +1,19 @@
+[2025-07-05T04:02:16.168] [INFO] Application - Starting WB Tariff Service...
+[2025-07-05T04:02:16.169] [INFO] Application - Running database migrations...
+[2025-07-05T04:02:16.224] [INFO] Application - Running database seeds...
+[2025-07-05T04:02:16.236] [INFO] Application - Database setup completed
+[2025-07-05T04:02:16.236] [INFO] GoogleSheetsService - Google Sheets API initialized successfully
+[2025-07-05T04:02:16.237] [INFO] SchedulerService - Starting scheduler service...
+[2025-07-05T04:02:16.237] [INFO] SchedulerService - Tariff fetching scheduled every 60 minutes
+[2025-07-05T04:02:16.237] [INFO] SchedulerService - Google Sheets updates scheduled every 360 minutes
+[2025-07-05T04:02:16.237] [INFO] SchedulerService - Starting tariff data fetch...
+[2025-07-05T04:02:16.279] [INFO] SchedulerService - Scheduler service started successfully
+[2025-07-05T04:02:16.279] [INFO] Application - WB Tariff Service started successfully
+[2025-07-05T04:02:17.411] [ERROR] WildberriesService - Failed to fetch tariff data for 2025-07-05: Error: API request failed: 401 Unauthorized
+    at WildberriesService.fetchTariffData (/home/uzo/Desktop/btlz-wb-test/src/services/wildberries.service.ts:35:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at SchedulerService.fetchAndStoreTariffData (/home/uzo/Desktop/btlz-wb-test/src/services/scheduler.service.ts:72:30)
+[2025-07-05T04:02:17.413] [ERROR] SchedulerService - Failed to fetch and store tariff data: Error: API request failed: 401 Unauthorized
+    at WildberriesService.fetchTariffData (/home/uzo/Desktop/btlz-wb-test/src/services/wildberries.service.ts:35:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at SchedulerService.fetchAndStoreTariffData (/home/uzo/Desktop/btlz-wb-test/src/services/scheduler.service.ts:72:30)
